@@ -17,7 +17,7 @@ Features include:
  * A countries field.
  * Ability to add any additional Fields to a country.
  * Integration with Views, Token, Apache solr search and Feeds modules.
- * Numerious methods to handle and filter the data.
+ * Numerous methods to handle and filter the data.
  * A country FAPI element.
 
 Countries 7.x-2.x only
@@ -81,7 +81,7 @@ America, Oceania, South America). An enabled flag defines a countries status.
 For example, Taiwan has the following values:
 
  * Name           - Taiwan
- * Offical name   - Taiwan, Republic of China
+ * Official name   - Taiwan, Republic of China
  * ISO alpha-2    - TW
  * ISO alpha-3    - TWN
  * ISO numeric-3  - 158
@@ -90,10 +90,10 @@ For example, Taiwan has the following values:
 
 The official names were originally taken from WikiPedia [2] and the majority of
 the continent information was imported from Country codes API project [3]. This
-have been since standardised with the ISO 3166-1 standard. 
+have been since standardized with the ISO 3166-1 standard. 
 
 Country updates are added when the ISO officially releases these. This process
-may be up to 2 - 6 months. South Sudans inclusion took around a month. Kosovo
+may be up to 2 - 6 months. South Sudan's inclusion took around a month. Kosovo
 is taking many months, but this should be added in the near future as Kosovo is
 a member both the IMF and World Bank.
 
@@ -328,7 +328,7 @@ The name, ISO alpha-2 and enabled columns can not be removed.
 
 4 - I18n support (Countries 7.x-2.x only)
 
-This is in the early implemenation stages using the Entity API integration.
+This is in the early implementation stages using the Entity API integration.
 
 5 - Why is the delete link hidden on some countries?
   - Why is the edit ISO alpha-2 code disabled on some countries?
