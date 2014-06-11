@@ -74,17 +74,6 @@ class CountriesBaseSetupTest extends DrupalWebTestCase {
   }
 
   /**
-   * These countries are not part of core.
-   */
-  function getNewCountries() {
-    return array(
-      'BQ' => t('Bonaire, Sint Eustatius and Saba'),
-      'SS' => t('South Sudan'),
-      'SX' => t('Sint Maarten (Dutch part)'),
-    );
-  }
-
-  /**
    * These are the invalid strings in core.
    */
   function getNonStandardCountries() {
@@ -301,8 +290,6 @@ class CountriesBaseImportUnitTest extends CountriesBaseSetupTest {
     $changed_countries_originals = $this->getNonStandardCountries();
     // Updated core countries to the iso standards.
     $changed_countries = $this->getNonStandardCountriesCorrected();
-    // New countries.
-    $new_countries = $this->getNewCountries();
 
     // Check that things are still valid tests.
     $core_tests = array_merge($unchanged_countries, $changed_countries_originals);
@@ -312,9 +299,6 @@ class CountriesBaseImportUnitTest extends CountriesBaseSetupTest {
       if ($this->assertNotNull($countries[$iso2], 'Core country ' . $iso2 . ' - ' .  $name . ' defined')) {
         $this->assertEqual($name, $countries[$iso2], 'Core country name ' .  $name . ' unchanged ' . $countries[$iso2]);
       }
-    }
-    foreach ($new_countries as $iso2 => $name) {
-      $this->assertTrue(empty($countries[$iso2]), 'Countries new country ' .  $iso2 . ' - ' .  $name . ' not included in core');
     }
 
     // Now test that our updates are appearing.
@@ -330,11 +314,6 @@ class CountriesBaseImportUnitTest extends CountriesBaseSetupTest {
         $this->assertNotEqual($name, $countries[$iso2], 'Testing updated country ' .  $name . ' is not overriden by default');
       }
     }
-    foreach ($new_countries as $iso2 => $name) {
-      if ($this->assertTrue(!empty($countries[$iso2]), 'Testing new country ' .  $iso2 . ' - ' .  $name . ' exists')) {
-        $this->assertEqual($name, $countries[$iso2], 'Testing new country ' .  $name . ' matches new listing');
-      }
-    }
   }
 
   /**
@@ -347,8 +326,6 @@ class CountriesBaseImportUnitTest extends CountriesBaseSetupTest {
     $changed_countries_originals = $this->getNonStandardCountries();
     // Updated core countries to the iso standards.
     $changed_countries = $this->getNonStandardCountriesCorrected();
-    // New countries.
-    $new_countries = $this->getNewCountries();
 
     // Visit update page and update the countries.
 
