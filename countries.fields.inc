@@ -29,6 +29,14 @@ function countries_field_info() {
 }
 
 /**
+ * @TODO: Function to keep compatibility with 7.x-2.1 version.
+ * @see: #2293209 issue.
+ */
+function countries_field_info_property_callback(&$info, $entity_type, $field, $instance, $field_type) {
+  countries_entity_metadata_field_property_callback($info, $entity_type, $field, $instance, $field_type);
+}
+
+/**
  * Callback to add in property info defaults per field instance.
  * @see entity_metadata_field_entity_property_info().
  */
