@@ -172,6 +172,7 @@ function countries_entity_info() {
   $return = array(
     'country' => array(
       'label' => t('Country'),
+      'plural label' => t('Countries'),
       'entity class' => 'Entity',
       'controller class' => 'EntityAPIControllerExportable',
       'base table' => 'countries_country',
