@@ -176,6 +176,7 @@ function countries_entity_info() {
       'entity class' => 'Entity',
       'controller class' => 'EntityAPIControllerExportable',
       'base table' => 'countries_country',
+      'token type' => 'country',
       'fieldable' => TRUE,
       'module' => 'countries',
       'entity keys' => array(
